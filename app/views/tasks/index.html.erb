@@ -1,4 +1,4 @@
-<h1>List of all tasks</h1>
+<h2>List of all tasks</h2>
 
 <% @tasks.each do |task| %>
 
@@ -12,3 +12,7 @@
 
 
 <% end %>
+
+<br>
+
+<%= link_to '+ Add a new task', tasks_new_path %>
