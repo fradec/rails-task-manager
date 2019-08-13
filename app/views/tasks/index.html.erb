@@ -6,7 +6,9 @@
     <input type="checkbox" name=<%= "#{task.title}" %>
       <%= "checked" if task.completed == true %>
     >
-    <label for=<%= "#{task.title}" %>><%= "#{task.title}" %></label>
+    <label for=<%= "#{task.title}" %>><%= link_to task.title, task_path(task) %>
+    </label>
   </li>
+
 
 <% end %>
