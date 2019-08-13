@@ -3,13 +3,9 @@
 <% @tasks.each do |task| %>
 
   <li>
-    <input type="checkbox" name=<%= "#{task.title}" %>
-      <%= "checked" if task.completed == true %>
-    >
-    <label for=<%= "#{task.title}" %>><%= link_to task.title, task_path(task) %>
-    </label>
+    <%= task.completed ? '✅' : '❌' %>
+    <%= link_to task.title, task_path(task) %>
   </li>
-
 
 <% end %>
 

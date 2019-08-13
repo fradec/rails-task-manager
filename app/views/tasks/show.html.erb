@@ -1,17 +1,13 @@
 <h2><%= @task.title %></h2>
 
+<%= link_to 'Edit this task', edit_path(@task) %>
+
 <div id="details">
   <%= @task.details %>
 </div>
 
 <div id="completed">
-  <% if @task.completed == false %>
-    <input type="checkbox">
-    <label>This task is not completed yet</label>
-  <% else %>
-    <input type="checkbox" checked>
-    <label>This task is done</label>
-  <% end %>
+  <%= @task.completed ? '✅ This task is done' : '❌ This task is not completed yet' %>
 </div>
 
 <br>
