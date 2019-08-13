@@ -1,6 +1,10 @@
-<h2><%= @task.title %></h2>
+<div class="show-task-title">
+  <h2><%= @task.title %></h2>
 
-<%= link_to 'Edit this task', edit_path(@task) %>
+  <%= link_to 'Edit this task', edit_path(@task), class: 'btn btn-danger' %>
+
+</div>
+
 
 <div id="details">
   <%= @task.details %>
@@ -10,5 +14,4 @@
   <%= @task.completed ? '✅ This task is done' : '❌ This task is not completed yet' %>
 </div>
 
-<br>
-<%= link_to 'Back to list', tasks_path %>
+<%= link_to 'Back to list', tasks_path, class: 'btn btn-success text-center' %>

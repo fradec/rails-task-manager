@@ -2,18 +2,23 @@
 
 <%= form_for(@task) do |f| %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
 
-  <%= f.label :details %>
-  <%= f.text_field :details %>
+  <div class="form-group">
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+  </div>
 
-  <%= f.label :completed %>
-  <%= f.check_box :completed %>
+  <div class="form-group">
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+  </div>
 
-  <%= f.submit %>
+  <%= f.submit class: 'btn btn-primary' %>
 
 <% end %>
 
-<br>
-<%= link_to 'Back to list', tasks_path %>
+<%= link_to 'Back to list', tasks_path, class: 'btn btn-success' %>
